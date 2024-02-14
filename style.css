@@ -235,10 +235,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.tableau-bub:hover{
+/* .tableau-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .data-viz-bub{
     width: 85px;
     height: 85px;
@@ -252,10 +252,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.data-viz-bub:hover{
+/* .data-viz-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .UI-bub{
     width: 85px;
     height: 85px;
@@ -268,10 +268,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.UI-bub:hover{
+/* .UI-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .figma-bub{
     width: 85px;
     height: 85px;
@@ -285,10 +285,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.figma-bub:hover{
+/* .figma-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .html-css-bub{
     width: 50px;
     height: 50px;
@@ -302,10 +302,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.html-css-bub:hover{
+/* .html-css-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .touch-bub{
     width: 65px;
     height: 65px;
@@ -317,10 +317,10 @@ button:hover{
     margin-top: 5px;
     transition: 0.3s;
 }
-.touch-bub:hover{
+/* .touch-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .concept-bub{
     width: 65px;
     height: 65px;
@@ -334,10 +334,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.concept-bub:hover{
+/* .concept-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .pts-bub{
     width: 75px;
     height: 75px;
@@ -350,10 +350,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.pts-bub:hover{
+/* .pts-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .illus-bub{
     width: 65px;
     height: 65px;
@@ -367,10 +367,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.illus-bub:hover{
+/* .illus-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 .animation-bub{
     width: 50px;
     height: 50px;
@@ -384,10 +384,10 @@ button:hover{
     flex: 0 0 auto;
     transition: 0.3s;
 }
-.animation-bub:hover{
+/* .animation-bub:hover{
     transform: scale(1.2);
     background-color: white;
-}
+} */
 
 /* SECTION 3 */
 .section-3-content{
