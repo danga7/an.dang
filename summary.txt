@@ -1,0 +1,17 @@
+Hi, this is a short summary from the assignment:
+
+What I tried:
+    - Almost everything that was mentioned in the class. I tried to use flexbox for almost all the position situation and I think I've gotten much better at it. 
+    - There are 3 breakpoints for different devices: phone, tablet and desktop. The phone view is default so I set 2 other media querries for tablet and laptop. The changes between them are not significant, but I want to tablet vertical view to have somehow a similar view with the phone, except for section 2. Therefore I choose a gap between 600-840px, where 93.73% (source:https://developer.android.com/guide/topics/large-screens/support-different-screen-sizes) tablet devices falls in vertical display. For tablet horizontal display, the interface is the same with desktop.
+    - I did some simple animation with CSS, including the change in button, (desktop) menu options, some subtle hover effects on skills bubbles and pictures. 
+    - I installed normalize.css into the file but honestly ther wasn't any noticeable changes. Maybe because I wasn't checking the web in many different browser.
+    - A small things that I noticed is that the menu circle (on phone view) doesn't need a hover on effect, as it'll only be displayed in touch devices.
+    - I've checked with the validator for both html and css files, and it did give me some errors that I didn't notice before. It all made sense so I adjusted them accordingly.
+
+Challenges & hiccups:
+    - Not really a challenge but I tried a bit to set the javascript for the phone drop-down menu, but in a short time I could figure it out yet, so I'll do it in the next assignment :) 
+    - There is only 2 pages now, the main page and contact page. I didn't have time to do the others cause the main page is already quite long and contains various style settings.
+    -  I still have problems with the bubbles, as right now they're not really in place and don't sync so well yet. Especially for the biggest one on the landing view, now it's only a static image but I think I may try with JS or D3 to set an array of them with different values -> so I can use them throughout the website with shorter settings, instead of having to write the same value for their styling like now.
+    - There are some small things such as border-radius for pictures in section 3 - it doesn't sync so well between phone and desktop view for now. I'll look at them later and try to fix it.
+
+Overall, I'm happy with the results as it's the longest html/css codes that I've ever done. I also understand a lot more and how to use them than before. I feel a lot more confident with html/css now :) hopefully the same thing can be said with javascript later!
