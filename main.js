@@ -58,21 +58,22 @@ function inView(id){
 
 document.addEventListener("scroll", function(){
     if(inView("section-3")){
-        document.getElementById("circle-1").style.opacity = 0.2;
-        document.getElementById("circle-2").style.opacity = 0.2;
-        document.getElementById("circle-3").style.opacity = 1;
-        document.getElementById("circle-4").style.opacity = 0.2;
+        document.getElementById("circle-1").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-2").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-3").style.cssText = "background-color: tomato; transform: scale(1.2);";
+        document.getElementById("circle-4").style.cssText = "background-color: white; transform: scale(1);";
     }
     if(inView("section-2")){
-        document.getElementById("circle-1").style.opacity = 0.2;
-        document.getElementById("circle-2").style.opacity = 1;
-        document.getElementById("circle-3").style.opacity = 0.2;
-        document.getElementById("circle-4").style.opacity = 0.2;
+        document.getElementById("circle-1").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-2").style.cssText = "background-color: tomato; transform: scale(1.2);";
+        document.getElementById("circle-3").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-4").style.cssText = "background-color: white; transform: scale(1);";
     }
     if(inView("section-1")){
-        document.getElementById("circle-1").style.opacity = 1;
-        document.getElementById("circle-2").style.opacity = 0.2;
-        document.getElementById("circle-3").style.opacity = 0.2;
-        document.getElementById("circle-4").style.opacity = 0.2;
+        document.getElementById("circle-1").style.cssText = "background-color: tomato; transform: scale(1.2);";
+        document.getElementById("circle-2").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-3").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-4").style.cssText = "background-color: white; transform: scale(1);";
     }
 })
+
