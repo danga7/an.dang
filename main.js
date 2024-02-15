@@ -77,3 +77,66 @@ document.addEventListener("scroll", function(){
     }
 })
 
+//set cursor when hover on selected work
+document.addEventListener("DOMContentLoaded", function(){
+    var section1pic = document.getElementsByClassName("section-1-pic");
+    if (section1pic.length > 0){
+        var customCursor = document.createElement("div");
+        customCursor.id = "custom-cursor";
+        document.body.appendChild(customCursor);
+
+        for(var i=0; i < section1pic.length; i++){
+            var section1pic = section1pic[i];
+            section1pic.addEventListener("mouseover", function(){
+                customCursor.style.display = "block";
+            });
+            section1pic.addEventListener("mouseout", function(){
+                customCursor.style.display = "none";
+            });
+            section1pic.addEventListener('mousemove', function(e) {
+                customCursor.style.left = e.clientX + 'px';
+                customCursor.style.top = e.clientY + 'px';
+            });
+        }
+    }
+});
+
+// ISN'T WORKING NOW
+// document.addEventListener("DOMContentLoaded", function(){
+//     var section1pic = document.getElementsByClassName("section-1-pic")[0];
+//     if (section1pic.length > 0){
+//         var customCursor = document.createElement("div");
+//         customCursor.className = "customCursor"; 
+//             customCursor.style.display = 'none';
+//             customCursor.style.position = 'fixed';
+//             customCursor.style.width = '40px';
+//             customCursor.style.height = '40px';
+//             customCursor.style.backgroundColor = "#FFC42F";
+//             customCursor.style.borderRadius = '50%';
+//             customCursor.style.pointerEvents = 'none';
+//             customCursor.style.zIndex = '1';
+//         document.body.appendChild(customCursor);
+//         console.log(section1pic);
+//         console.log(typeof section1pic);
+
+//        section1pic.addEventListener("mouseover", function(e){
+//         var cursor = this.getElementsByClassName("customCursor")[0];
+//         cursor.style.display = "block";
+//         console.log("Mouse over event triggered");
+//        });
+//        section1pic.addEventListener("mouseout", function(e){
+//         var cursor = this.getElementsByClassName("customCursor")[0];
+//         console.log("Mouse out event triggered");
+//         cursor.style.display = "none";
+//        });
+//        section1pic.addEventListener("mousemove", function(e) {
+//         var cursor = this.getElementsByClassName("customCursor")[0];
+//         cursor.style.left = e.clientX + 'px';
+//         cursor.style.top = e.clientY + 'px';
+//     });
+//     }
+// });
+
+
+
+
