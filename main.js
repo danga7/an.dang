@@ -43,5 +43,36 @@ function resetBubble(event) {
     event.target.style.transform = ""; 
 }
 
+// Vertical bar circle
 
+function inView(id){
+    var object = document.getElementById(id);
+    var y = object.getBoundingClientRect().y
+    // console.log(object.getBoundingClientRect().y, window.innerHeight)
+    if( y <= window.innerHeight && y > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
 
+document.addEventListener("scroll", function(){
+    if(inView("section-3")){
+        document.getElementById("circle-1").style.opacity = 0.2;
+        document.getElementById("circle-2").style.opacity = 0.2;
+        document.getElementById("circle-3").style.opacity = 1;
+        document.getElementById("circle-4").style.opacity = 0.2;
+    }
+    if(inView("section-2")){
+        document.getElementById("circle-1").style.opacity = 0.2;
+        document.getElementById("circle-2").style.opacity = 1;
+        document.getElementById("circle-3").style.opacity = 0.2;
+        document.getElementById("circle-4").style.opacity = 0.2;
+    }
+    if(inView("section-1")){
+        document.getElementById("circle-1").style.opacity = 1;
+        document.getElementById("circle-2").style.opacity = 0.2;
+        document.getElementById("circle-3").style.opacity = 0.2;
+        document.getElementById("circle-4").style.opacity = 0.2;
+    }
+})

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/fbe6wve.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,15 +33,23 @@
             <p><a href="about.html">About</a></p>
             <p><a href="sandbox.html">Sandbox</a></p>
         </div>
-        <div class="vertical-bar">
+        <!-- <div class="vertical-bar">
             <div class="circle-bar" style="width: 20px; height: 20px; background-color:tomato;"></div>
             <div class="circle-bar"></div>
             <div class="circle-bar"></div>
             <div class="circle-bar"></div>
+        </div> -->
+
+        <div class="vertical-bar">
+            <div class="circle-bar" id="circle-1"></div>
+            <div class="circle-bar" id="circle-2"></div>
+            <div class="circle-bar" id="circle-3"></div>
+            <div class="circle-bar" id="circle-4"></div>
         </div>
+
         <div class="content-container">
             <!-- SECTION 1 -->
-            <div class="section-container">
+            <div class="section-container" id="section-1">
                 <!-- for scrolling to certain section, id can be used later -->
                 <div class="headline">
                     <p>Hi there!</p>
@@ -54,7 +62,7 @@
             </div>
 
             <!-- SECTION 2 -->
-            <div class="section-container">
+            <div class="section-container" id="section-2">
                 <div class="headline"> 
                     <h1>Selected works</h1>
                     <p>Below are some detailed works that align the most with my current interest and career direction.</p>
@@ -162,7 +170,7 @@
             </div>
 
             <!-- SECTION 3 -->
-            <div class="section-container">
+            <div class="section-container" id="section-3">
                 <div class="headline">
                     <h1>Archived works</h1>
                     <p>Other previous projects that cover a wide range of expertises, most of them doesn’t make it to full case studies.</p>
