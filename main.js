@@ -80,20 +80,21 @@ document.addEventListener("scroll", function(){
 //set cursor when hover on selected work
 document.addEventListener("DOMContentLoaded", function(){
     var section1pic = document.getElementsByClassName("section-1-pic");
+    console.log(section1pic)
     if (section1pic.length > 0){
         var customCursor = document.createElement("div");
         customCursor.id = "custom-cursor";
         document.body.appendChild(customCursor);
 
         for(var i=0; i < section1pic.length; i++){
-            var section1pic = section1pic[i];
-            section1pic.addEventListener("mouseover", function(){
+            var s1pic = section1pic[i];
+            s1pic.addEventListener("mouseover", function(){
                 customCursor.style.display = "block";
             });
-            section1pic.addEventListener("mouseout", function(){
+            s1pic.addEventListener("mouseout", function(){
                 customCursor.style.display = "none";
             });
-            section1pic.addEventListener('mousemove', function(e) {
+            s1pic.addEventListener('mousemove', function(e) {
                 customCursor.style.left = e.clientX + 'px';
                 customCursor.style.top = e.clientY + 'px';
             });

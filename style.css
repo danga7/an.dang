@@ -284,9 +284,9 @@ button:hover{
     cursor: none;
 }
 
-/* .section-1-pic:hover{
+.section-1-pic:hover{
     transform: scale(1.2);
-} */
+}
 
 .bubbles-1{
     width: 100%;
