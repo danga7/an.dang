@@ -1,9 +1,4 @@
 //dropdown menu on mobile
-
-// function menuDrop(){
-//     document.getElementById("dropContent").classList.toggle("show");
-// }
-
 const dropdownButt = document.getElementById("dropbutt");
 const dropdownMenu = document.getElementById("dropContent");
 const toggleCancel = document.getElementById("dropbutt");
@@ -25,26 +20,26 @@ document.documentElement.addEventListener("click", function () {
     }
   });
 
-// var bubbles = document.getElementById("bubs").children;
-var bubbles = document.querySelectorAll("#bubs p");
+//  Bubbles highlight
+// // var bubbles = document.getElementById("bubs").children;
+// var bubbles = document.querySelectorAll("#bubs p");
 
-for (var i = 0; i < bubbles.length; i++) {
-    bubbles[i].addEventListener("mouseover", highlightBubble, false);
-    bubbles[i].addEventListener("mouseout", resetBubble, false);
-}
+// for (var i = 0; i < bubbles.length; i++) {
+//     bubbles[i].addEventListener("mouseover", highlightBubble, false);
+//     bubbles[i].addEventListener("mouseout", resetBubble, false);
+// }
 
-function highlightBubble(event) {
-    event.target.style.backgroundColor = "white";
-    event.target.style.transform = "scale(1.2)";
-}
+// function highlightBubble(event) {
+//     event.target.style.backgroundColor = "white";
+//     event.target.style.transform = "scale(1.2)";
+// }
 
-function resetBubble(event) {
-    event.target.style.backgroundColor = ""; 
-    event.target.style.transform = ""; 
-}
+// function resetBubble(event) {
+//     event.target.style.backgroundColor = ""; 
+//     event.target.style.transform = ""; 
+// }
 
 // Vertical bar circle
-
 function inView(id){
     var object = document.getElementById(id);
     var y = object.getBoundingClientRect().y
@@ -80,7 +75,6 @@ document.addEventListener("scroll", function(){
 //set cursor when hover on selected work
 document.addEventListener("DOMContentLoaded", function(){
     var section1pic = document.getElementsByClassName("section-1-pic");
-    console.log(section1pic)
     if (section1pic.length > 0){
         var customCursor = document.createElement("div");
         customCursor.id = "custom-cursor";
@@ -102,42 +96,117 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
-// ISN'T WORKING NOW
-// document.addEventListener("DOMContentLoaded", function(){
-//     var section1pic = document.getElementsByClassName("section-1-pic")[0];
-//     if (section1pic.length > 0){
-//         var customCursor = document.createElement("div");
-//         customCursor.className = "customCursor"; 
-//             customCursor.style.display = 'none';
-//             customCursor.style.position = 'fixed';
-//             customCursor.style.width = '40px';
-//             customCursor.style.height = '40px';
-//             customCursor.style.backgroundColor = "#FFC42F";
-//             customCursor.style.borderRadius = '50%';
-//             customCursor.style.pointerEvents = 'none';
-//             customCursor.style.zIndex = '1';
-//         document.body.appendChild(customCursor);
-//         console.log(section1pic);
-//         console.log(typeof section1pic);
+// Bubble filtering
 
-//        section1pic.addEventListener("mouseover", function(e){
-//         var cursor = this.getElementsByClassName("customCursor")[0];
-//         cursor.style.display = "block";
-//         console.log("Mouse over event triggered");
-//        });
-//        section1pic.addEventListener("mouseout", function(e){
-//         var cursor = this.getElementsByClassName("customCursor")[0];
-//         console.log("Mouse out event triggered");
-//         cursor.style.display = "none";
-//        });
-//        section1pic.addEventListener("mousemove", function(e) {
-//         var cursor = this.getElementsByClassName("customCursor")[0];
-//         cursor.style.left = e.clientX + 'px';
-//         cursor.style.top = e.clientY + 'px';
-//     });
-//     }
-// });
+const bubbles = Array.from(document.querySelectorAll('.bub'));
 
+const tableauBub = Array.from(document.querySelectorAll('.tableau'));
+const dataVizBub = Array.from(document.querySelectorAll('.data-viz'));
+const UIBub = Array.from(document.querySelectorAll('.UI'));
+const figmaBub = Array.from(document.querySelectorAll('.figma'));
+const htmlBub = Array.from(document.querySelectorAll('.html-css'));
+const touchBub = Array.from(document.querySelectorAll('.touch'));
+const conceptBub = Array.from(document.querySelectorAll('.concept'));
+const ptsBub = Array.from(document.querySelectorAll('.pts'));
+const illusBub = Array.from(document.querySelectorAll('.illus'));
+const aniBub = Array.from(document.querySelectorAll('.animation'));
+const javaBub = Array.from(document.querySelectorAll('.java'));
 
+function highlightBub(highlightedBub) {
+    highlightedBub.map(bub => {
+        bub.style.transform = "scale(1.2)";
+        bub.style.backgroundColor = "white";
+        bub.style.border = "1px";
+        bub.style.borderColor = "black";
+    });
+}
 
+function unHighlightBub(unHighlightedBub){
+    unHighlightedBub.map(bub => {
+        bub.style.transform = "";
+        bub.style.backgroundColor = "";
+    })
+}
 
+dataVizBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        console.log ("hover on dataviz");
+        highlightBub(dataVizBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        console.log("unhover");
+        unHighlightBub(dataVizBub);
+    })
+})
+tableauBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(tableauBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(tableauBub);
+    })
+})
+UIBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(UIBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(UIBub);
+    })
+})
+figmaBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(figmaBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(figmaBub);
+    })
+})
+htmlBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(htmlBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(htmlBub);
+    })
+})
+touchBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(touchBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(touchBub);
+    })
+})
+conceptBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(conceptBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(conceptBub);
+    })
+})
+ptsBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(ptsBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(ptsBub);
+    })
+})
+aniBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(aniBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(aniBub);
+    })
+})
+javaBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(javaBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(javaBub);
+    })
+})

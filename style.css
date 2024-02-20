@@ -136,6 +136,7 @@ button:hover{
     padding: 10px 35px;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .headline{
@@ -311,10 +312,13 @@ button:hover{
 } */
 
 /* SECTION 2 BUBBLES */
-.tableau-bub{
+.bub{
+    border-radius: 100%;
+}
+.tableau{
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     background-color: rgba(233,166,0,0.3);
     display: flex;
     align-items: center;
@@ -327,10 +331,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.data-viz-bub{
+.data-viz{
     width: 85px;
     height: 85px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,10 +348,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.UI-bub{
+.UI{
     width: 85px;
     height: 85px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,10 +364,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.figma-bub{
+.figma{
     width: 85px;
     height: 85px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -377,10 +381,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.html-css-bub{
+.html-css{
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -394,10 +398,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.touch-bub{
+.touch{
     width: 65px;
     height: 65px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     background-color: rgba(233,166,0,0.3);
     display: flex;
     align-items: center;
@@ -409,10 +413,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.concept-bub{
+.concept{
     width: 65px;
     height: 65px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -426,10 +430,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.pts-bub{
+.pts{
     width: 75px;
     height: 75px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -442,10 +446,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.illus-bub{
+.illus{
     width: 65px;
     height: 65px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,10 +463,10 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.animation-bub{
+.animation{
     width: 50px;
     height: 50px;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,7 +480,7 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.java-bub{
+.java{
     width: 50px;
     height: 50px;
     border-radius: 100%;
