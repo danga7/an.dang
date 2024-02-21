@@ -65,6 +65,7 @@ button:hover{
     background-color: #e2ad26;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #custom-cursor{
@@ -136,6 +137,7 @@ button:hover{
     padding: 10px 35px;
     position: fixed;
     top: 0;
+    border-bottom: 3px solid black;
     z-index: 1000;
 }
 
@@ -173,8 +175,8 @@ button:hover{
     position:fixed;
     width: 100%;
     height: 70vh;
-    margin-top: 5px;
-    padding-top: 20px;
+    margin-top: -10px;
+    padding-top: 45px;
     /* padding: 20px; */
     visibility: hidden;
     opacity: 0;
@@ -183,7 +185,7 @@ button:hover{
     border-bottom-right-radius: 20px;
     box-shadow: 0 12px 16px -6px rgba(0, 0, 0, 0.4);
     text-align: right;
-    z-index: 1;
+    z-index: 900;
 }
 .dropdown-content a{
     list-style-type: none;
@@ -279,9 +281,8 @@ button:hover{
     width: 100%;
     height:100%;
     object-fit:cover;
-    border-radius: 10px;
-    /* border-bottom-left-radius: 17px;
-    border-bottom-right-radius: 17px; */
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
     cursor: none;
 }
 
@@ -534,6 +535,7 @@ button:hover{
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    cursor: none;
 }
 
 .picture-down-2 p{
@@ -572,7 +574,8 @@ button:hover{
 }
 
 .content-3-bubble *{
-    transform: scale(0.8);
+    /* transform: scale(0.8); */
+    z-index: 300;
 }
 
 .content-3-bubble p{
@@ -582,6 +585,34 @@ button:hover{
     font-weight: 400;
     text-align: center;
 }
+
+/* SECTION 4 */
+
+#section-4{
+    margin-top: 85px;
+    margin-bottom: 120px;
+}
+
+/* PAGE FOOTER */
+
+.footer{
+    width: 100vw;
+    height: 10vh;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    border-top: 3px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p{
+    /* margin: 0; */
+    font-size: 10px;
+    margin-left: 10vw;
+}
+
+
 
 /* CONTACT PAGE */
 .contact-container{
@@ -616,7 +647,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* MEDIA QUERRIES */
@@ -632,6 +663,9 @@ button:hover{
     .navigation-container{
         padding: 10px 55px;
     }
+    .dropdown-content p{
+        margin: 30px 55px 30px 30px;
+    }
     .selected-work-content{
         flex-direction: row;
         margin-bottom: 40px;
@@ -643,8 +677,12 @@ button:hover{
         padding-left: 50px;
         padding-right: 50px;
     }
-    .picture-down{
+    .selected-work-picture{
         width: 40vw;
+        /* overflow: hidden; */
+    }
+    .picture-down{
+        width: 39vw;
     }
     .selected-work-info{
         display: flex;

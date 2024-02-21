@@ -52,6 +52,12 @@ function inView(id){
 }
 
 document.addEventListener("scroll", function(){
+    if(inView("section-4")){
+        document.getElementById("circle-1").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-2").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-3").style.cssText = "background-color: white; transform: scale(1);";
+        document.getElementById("circle-4").style.cssText = "background-color: tomato; transform: scale(1.2);";
+    }
     if(inView("section-3")){
         document.getElementById("circle-1").style.cssText = "background-color: white; transform: scale(1);";
         document.getElementById("circle-2").style.cssText = "background-color: white; transform: scale(1);";
@@ -96,6 +102,29 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
+document.addEventListener("DOMContentLoaded", function(){
+    var section3pic = document.getElementsByClassName("picture-down-2");
+    if (section3pic.length > 0){
+        var customCursor = document.createElement("div");
+        customCursor.id = "custom-cursor";
+        document.body.appendChild(customCursor);
+
+        for(var i=0; i < section3pic.length; i++){
+            var s3pic = section3pic[i];
+            s3pic.addEventListener("mouseover", function(){
+                customCursor.style.display = "block";
+            });
+            s3pic.addEventListener("mouseout", function(){
+                customCursor.style.display = "none";
+            });
+            s3pic.addEventListener('mousemove', function(e) {
+                customCursor.style.left = e.clientX + 'px';
+                customCursor.style.top = e.clientY + 'px';
+            });
+        }
+    }
+});
+
 // Bubble filtering
 
 const bubbles = Array.from(document.querySelectorAll('.bub'));
@@ -118,6 +147,7 @@ function highlightBub(highlightedBub) {
         bub.style.backgroundColor = "white";
         bub.style.border = "1px";
         bub.style.borderColor = "black";
+        bub.style.zIndex = "500";
     });
 }
 
@@ -125,6 +155,7 @@ function unHighlightBub(unHighlightedBub){
     unHighlightedBub.map(bub => {
         bub.style.transform = "";
         bub.style.backgroundColor = "";
+        bub.style.zIndex = "";
     })
 }
 
