@@ -194,6 +194,14 @@ ptsBub.map(bub => {
         unHighlightBub(ptsBub);
     })
 })
+illusBub.map(bub => {
+    bub.addEventListener("mouseover", () => {
+        highlightBub(illusBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(illusBub);
+    })
+})
 aniBub.map(bub => {
     bub.addEventListener("mouseover", () => {
         highlightBub(aniBub);
