@@ -222,22 +222,6 @@
                             <div><p class="bub html-css">HTML/CSS</p></div>
                         </div>
                     </div>
-                    <!-- PIC 6 -->
-                    <!-- <div class="content-3">
-                        <div class="content-3-box">
-                            <div class="picture-top-2"></div>
-                            <div class="picture-down-2">
-                                <img src="./img/work9a.png" alt="work7a" class="section-3-pic-left">
-                                <img src="./img/work9b.png" alt="work7b" class="section-3-pic-right">
-                                <img src="./img/work9b.png" alt="work7b" class="section-3-pic-right">
-                            </div>
-                        </div>
-                        <div class="content-3-bubble" id="bubs">
-                            <div><p class="bub data-viz">Data Visualization</p></div>
-                            <div><p class="bub UI">UI Design</p></div>
-                            <div><p class="bub html-css">HTML/CSS</p></div>
-                        </div>
-                    </div> -->
                     <!-- PIC 7 -->
                     <div class="content-3">
                         <div class="content-3-box">
@@ -257,23 +241,41 @@
 
             <!-- SECTION 4 -->
             <div class="section-container" id="section-4">
-                <div class="headline">
-                    <p>How was that? And also,</p>
-                    <h1>Let's connect</h1>
-                    <p>I’m very open to any suggestion or feedback on everything!</p>
+                <div class="contact-infor">
+                    <div class="headline">
+                        <p>How was that? And also,</p>
+                        <h1>Let's connect</h1>
+                        <p>I’m very open to any suggestion or feedback on everything!</p>
+                    </div>
+                    <div class="contact-butt-container">
+                        <a href="https://www.linkedin.com/in/anndan/" target="_blank">
+                            <button class="contact-butt">My LinkedIn</button>
+                        </a>
+                        <a href="//drive.google.com/file/d/1E4c04FpXFOy-n-Y-DEDlYF1jdmd0xqUJ/view?usp=sharing" target="_blank">
+                            <button class="contact-butt">My Resume</button>
+                        </a>
+                        <a href="https://dribbble.com/andangport">
+                            <button class="contact-butt">My Dribbble</button>
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-butt-container">
-                    <a href="https://www.linkedin.com/in/anndan/" target="_blank">
-                        <button class="contact-butt">My LinkedIn</button>
-                    </a>
-                    <a href="//drive.google.com/file/d/1E4c04FpXFOy-n-Y-DEDlYF1jdmd0xqUJ/view?usp=sharing" target="_blank">
-                        <button class="contact-butt">My Resume</button>
-                    </a>
-                    <a href="mailto:dangan.creative@gmail.com">
-                        <button class="contact-butt">My Email</button>
-                    </a>
+                <div class="contact-form">
+                    <form action="mail.php" method="post">
+                        <div class="headline">
+                            <p>Or, even better,</p>
+                            <h2>Tell me anything!</h2>
+                        </div>
+                            <label for="fname">Your Name</label>
+                            <input type="text" id="fname" name="fname" placeholder="Your name..">
+                            <label for="role">Your Role</label>
+                            <input type="text" id="role" name="role" placeholder="You are a...">
+                            <label for="role">Your Contact</label>
+                            <input type="email" id="email" name="email" placeholder="Your email...">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="What would you like to tell me?"></textarea>
+                            <input type="submit" value="Send">
+                    </form>
                 </div>
-            </div>
         </div>
     </div>
     <div class="footer">

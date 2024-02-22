@@ -62,7 +62,7 @@ button{
 }
 
 button:hover{
-    background-color: #e2ad26;
+    background-color: #c5951b;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -591,6 +591,62 @@ button:hover{
 #section-4{
     margin-top: 85px;
     margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form{
+    background-color: #f1e1b6;
+    border-radius: 30px;
+    padding: 0px 30px 30px 30px;
+    margin-top: 25px;
+    margin-right: 25px;
+    /* text-align: center; */
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit]{
+    background-color: #FFC42F;
+    color: black;
+    border-radius: 35px;
+    border: 2px solid black;
+    padding: 15px 30px;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+input[type=submit]:hover{
+    background-color: #c5951b;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+label{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 12px;
 }
 
 /* PAGE FOOTER */
@@ -611,7 +667,6 @@ button:hover{
     font-size: 10px;
     margin-left: 10vw;
 }
-
 
 
 /* CONTACT PAGE */
@@ -647,7 +702,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* MEDIA QUERRIES */
@@ -700,6 +755,15 @@ button:hover{
     }
     .landing-img{
         width:60%;
+    }
+    #section-4{
+        flex-direction: row;
+    }
+    .contact-form{
+        width: 70%;
+    }
+    .contact-butt-container{
+        margin-top: 20px;
     }
 }
 
@@ -772,5 +836,14 @@ button:hover{
     }
     .contact-container{
         margin-left: 50px;
+    }
+    .contact-butt-container{
+        margin-top: 20px;
+    }
+    #section-4{
+        flex-direction: row;
+    }
+    .contact-form{
+        width: 50%;
     }
 }
