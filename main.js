@@ -20,25 +20,6 @@ document.documentElement.addEventListener("click", function () {
     }
   });
 
-//  Bubbles highlight
-// // var bubbles = document.getElementById("bubs").children;
-// var bubbles = document.querySelectorAll("#bubs p");
-
-// for (var i = 0; i < bubbles.length; i++) {
-//     bubbles[i].addEventListener("mouseover", highlightBubble, false);
-//     bubbles[i].addEventListener("mouseout", resetBubble, false);
-// }
-
-// function highlightBubble(event) {
-//     event.target.style.backgroundColor = "white";
-//     event.target.style.transform = "scale(1.2)";
-// }
-
-// function resetBubble(event) {
-//     event.target.style.backgroundColor = ""; 
-//     event.target.style.transform = ""; 
-// }
-
 // Vertical bar circle
 function inView(id){
     var object = document.getElementById(id);
@@ -159,14 +140,50 @@ function unHighlightBub(unHighlightedBub){
     })
 }
 
+//Set tooltip
+const toolText = "Click to highlight category";
+
+function showTooltip(mouseX, mouseY) {
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.textContent = toolText;
+    document.body.appendChild(tooltip);
+
+    tooltip.style.left = `${mouseX}px`;
+    tooltip.style.top = `${mouseY}px`;
+}
+function removeTooltip() {
+    const tooltip = document.querySelector('.tooltip');
+    if (tooltip) {
+        tooltip.remove();
+    }
+}
+
+bubbles.forEach(bub => {
+    bub.addEventListener('mouseover', (event) => {
+        const mouseX = event.pageX + 10; // Offset from mouse cursor
+        const mouseY = event.pageY + 10; // Offset from mouse cursor
+        showTooltip(mouseX, mouseY);
+    });
+
+    bub.addEventListener('mouseout', () => {
+        removeTooltip();
+    });
+});
+
+//highlight bubbles
 dataVizBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    bub.addEventListener("mouseover", (event) => {
         console.log ("hover on dataviz");
         highlightBub(dataVizBub);
+        const mouseX = event.pageX + 10; // Offset from mouse cursor
+        const mouseY = event.pageY + 10; // Offset from mouse cursor
+        showTooltip(mouseX, mouseY);
     });
     bub.addEventListener("mouseout", () => {
         console.log("unhover");
         unHighlightBub(dataVizBub);
+        removeTooltip();
     })
 })
 tableauBub.map(bub => {
@@ -184,6 +201,10 @@ UIBub.map(bub => {
     bub.addEventListener("mouseout", () => {
         unHighlightBub(UIBub);
     })
+    // bub.addEventListener('click', () => {
+    //     console.log('clicked')
+    //     highlightBub(UIBub);
+    //   });
 })
 figmaBub.map(bub => {
     bub.addEventListener("mouseover", () => {
@@ -249,3 +270,25 @@ javaBub.map(bub => {
         unHighlightBub(javaBub);
     })
 })
+
+
+//Landing page bubbles animation
+
+function moveBubbles() {
+    var landingBubs = document.querySelectorAll('.bub');
+    landingBubs.forEach(function(movingBub) {
+      // Random scaling
+      var randomScale = Math.random() * 0.5 + 0.8;
+      movingBub.style.transform = 'scale(' + randomScale + ')';
+  
+      // Random moving - doesn't work?
+      var randomX = Math.random() * window.innerWidth;
+      var randomY = Math.random() * window.innerHeight;
+      movingBub.style.left = randomX + 'px';
+      movingBub.style.top = randomY + 'px';
+      console.log(randomX)
+    });
+  }
+  
+  setInterval(moveBubbles, 2000); 
+  
