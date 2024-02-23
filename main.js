@@ -20,6 +20,26 @@ document.documentElement.addEventListener("click", function () {
     }
   });
 
+// reset category button
+document.addEventListener("DOMContentLoaded", function() {
+    var resetButt = document.getElementById("resetButtMob");
+    var resetText = document.getElementById("resetTextMob");
+
+    resetButt.addEventListener("click", function() {
+        resetText.style.display = "block";
+    });
+    resetText.addEventListener("click", function(event) {
+        event.stopPropagation(); 
+    });
+
+    document.addEventListener("click", function(event) {
+        if (event.target !== resetButt) {
+            resetText.style.display = "none";
+        }
+    });
+});
+
+
 // Vertical bar circle
 function inView(id){
     var object = document.getElementById(id);
@@ -124,11 +144,18 @@ const javaBub = Array.from(document.querySelectorAll('.java'));
 
 function highlightBub(highlightedBub) {
     highlightedBub.map(bub => {
-        bub.style.transform = "scale(1.2)";
+        bub.style.transform = "scale(1.8)";
         bub.style.backgroundColor = "white";
         bub.style.border = "1px";
-        bub.style.borderColor = "black";
-        bub.style.zIndex = "500";
+        // bub.style.borderColor = "black";
+        // bub.style.zIndex = "500";
+    });
+}
+
+function hoverBub(hoveredBub){
+    hoveredBub.map(bub => {
+        bub.style.transform = "scale(1.2)";
+        bub.style.backgroundColor = "white";
     });
 }
 
@@ -138,6 +165,13 @@ function unHighlightBub(unHighlightedBub){
         bub.style.backgroundColor = "";
         bub.style.zIndex = "";
     })
+}
+
+function unhoverBub(unhoveredBub){
+    unhoveredBub.map(bub => {
+        bub.style.transform = "";
+        bub.style.backgroundColor = "";
+    });
 }
 
 //Set tooltip
@@ -173,103 +207,147 @@ bubbles.forEach(bub => {
 
 //highlight bubbles
 dataVizBub.map(bub => {
-    bub.addEventListener("mouseover", (event) => {
-        console.log ("hover on dataviz");
+    // bub.addEventListener("mouseover", (event) => {
+    //     console.log ("hover on dataviz");
+    //     hoverBub(dataVizBub);
+    //     showTooltip(mouseX, mouseY);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     console.log("unhover");
+    //     unhoverBub(dataVizBub);
+    //     removeTooltip();
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(dataVizBub);
-        const mouseX = event.pageX + 10; // Offset from mouse cursor
-        const mouseY = event.pageY + 10; // Offset from mouse cursor
-        showTooltip(mouseX, mouseY);
-    });
-    bub.addEventListener("mouseout", () => {
-        console.log("unhover");
-        unHighlightBub(dataVizBub);
-        removeTooltip();
-    })
+      });
 })
 tableauBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(tableauBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(tableauBub);
+    // })
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(tableauBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(tableauBub);
-    })
+      });
 })
 UIBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
-        highlightBub(UIBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(UIBub);
-    })
-    // bub.addEventListener('click', () => {
-    //     console.log('clicked')
+    // bub.addEventListener("mouseover", () => {
     //     highlightBub(UIBub);
-    //   });
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(UIBub);
+    // })
+    bub.addEventListener('click', () => {
+        console.log('clicked')
+        highlightBub(UIBub);
+      });
 })
 figmaBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(figmaBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(figmaBub);
+    // })
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(figmaBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(figmaBub);
-    })
+      });
 })
 htmlBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(htmlBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(htmlBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(htmlBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(htmlBub);
-    })
+      });
 })
 touchBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(touchBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(touchBub);
+    // })
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(touchBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(touchBub);
-    })
+      });
 })
 conceptBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(conceptBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(conceptBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(conceptBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(conceptBub);
-    })
+      });
 })
 ptsBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(ptsBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(ptsBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(ptsBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(ptsBub);
-    })
+      });
 })
 illusBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(illusBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(illusBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(illusBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(illusBub);
-    })
+      });
 })
 aniBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(aniBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(aniBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(aniBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(aniBub);
-    })
+      });
 })
 javaBub.map(bub => {
-    bub.addEventListener("mouseover", () => {
+    // bub.addEventListener("mouseover", () => {
+    //     highlightBub(javaBub);
+    // });
+    // bub.addEventListener("mouseout", () => {
+    //     unHighlightBub(javaBub);
+    // });
+    bub.addEventListener('click', () => {
+        console.log('clicked')
         highlightBub(javaBub);
-    });
-    bub.addEventListener("mouseout", () => {
-        unHighlightBub(javaBub);
-    })
+      });
 })
+
+//bubble reset button
+const resetButton = document.querySelector('#resetTextMob');
+resetButton.addEventListener('click', () => {
+    unHighlightBub(bubbles);
+});
 
 
 //Landing page bubbles animation
@@ -278,12 +356,12 @@ function moveBubbles() {
     var landingBubs = document.querySelectorAll('.bub');
     landingBubs.forEach(function(movingBub) {
       // Random scaling
-      var randomScale = Math.random() * 0.5 + 0.8;
+      var randomScale = Math.random() * 0.7 + 1;
       movingBub.style.transform = 'scale(' + randomScale + ')';
   
       // Random moving - doesn't work?
-      var randomX = Math.random() * window.innerWidth;
-      var randomY = Math.random() * window.innerHeight;
+      var randomX = Math.random() * 10;
+      var randomY = Math.random() * 10;
       movingBub.style.left = randomX + 'px';
       movingBub.style.top = randomY + 'px';
       console.log(randomX)

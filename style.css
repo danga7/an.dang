@@ -79,6 +79,52 @@ button:hover{
     display: none;
 }
 
+#resetButtMob{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFC42F;
+    border: 2px solid black; 
+    position: fixed; 
+    bottom: 10px;
+    left: 10px;
+    text-align: center;
+    padding: 10px;
+    line-height: 0.75rem;
+    cursor: pointer;
+    /* transition: 0.3s; */
+}
+
+#resetTextMob{
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #FFC42F;
+    border: 2px solid black; 
+    position: fixed; 
+    bottom: 10px;
+    left: 10px;
+    display: none;
+    transition: opacity 0.3s ease; 
+    cursor: pointer;
+    /* opacity: 0; */
+    /* padding: 5px; */
+}
+
+#resetTextMob p{
+    font-size: 12px;
+    text-align: left;
+    text-decoration: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-left: 20px;
+    margin: 0px;
+}
+
+.resetDesktop{
+    display: none;
+}
 
 /* BODY CONTENT GENERAL */
 
@@ -267,8 +313,8 @@ button:hover{
 .bubbles-main-2 > div{
     /* margin-top: -2px; */
     margin: 5px;
-    transform: scale(1.5);
-    animation: bubbleSize 2s infinite alternate
+    transform: scale(1.2);
+    /* animation: bubbleSize 2s infinite alternate */
 }
 
 
@@ -323,6 +369,7 @@ button:hover{
     flex-direction: column; 
     border: 3px solid black;
     border-radius: 20px;
+    overflow: hidden;
 }
 
 .picture-top{
@@ -375,6 +422,8 @@ button:hover{
 /* SECTION 2 BUBBLES */
 .bub{
     border-radius: 100%;
+    border: 0px;
+    cursor: pointer;
 }
 .tableau{
     width: 50px;
@@ -723,6 +772,7 @@ label{
     font-size: 12px;
 }
 
+
 /* PAGE FOOTER */
 
 .footer{
@@ -800,8 +850,42 @@ label{
     .navigation-container{
         padding: 10px 55px;
     }
+    #resetButtMob{
+        bottom: 60px;
+        left: 40px;
+    }
+    #resetTextMob{
+        width: 160px;
+        bottom: 60px;
+        left: 40px;
+    }
+    #resetTextMob p{
+        padding-top: 10px;
+    }
+
+    /* .resetDesktop{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #FFC42F;
+        border: 2px solid black; 
+        position: fixed; 
+        bottom: 10px;
+        left: 10px;
+        text-align: center;
+        padding: 10px;
+        line-height: 0.75rem;
+        cursor: pointer;} */
+
     .dropdown-content p{
         margin: 30px 55px 30px 30px;
+    }
+    .bubbles-main-2{
+        width: 65%;
+    }
+    .bubbles-main-2 > div{
+        /* margin-top: -2px; */
+        padding: 10px;
     }
     .selected-work-content{
         flex-direction: row;
@@ -816,7 +900,8 @@ label{
     }
     .selected-work-picture{
         width: 40vw;
-        /* overflow: hidden; */
+        overflow: hidden;
+        width: 1800px;
     }
     .picture-down{
         width: 39vw;
@@ -870,6 +955,18 @@ label{
     .menu-horizontal{
         display: flex;
     }
+    #resetButtMob{
+        bottom: 60px;
+        left: 60px;
+    }
+    #resetTextMob{
+        width: 160px;
+        bottom: 60px;
+        left: 60px;
+    }
+    #resetTextMob p{
+        padding-top: 10px;
+    }
     .circle-bar{
         width: 20px;
         height: 20px;
@@ -878,6 +975,18 @@ label{
     }
     .headline{
         margin-top: 50px;
+    }
+    .bubbles-main-2{
+        margin-top: 40px;
+        width: 60%;
+        transform: scale(1.5);
+    }
+    .bubbles-main-2 > div{
+        /* margin-top: -2px; */
+        padding: 15px;
+        margin-bottom: -30px;
+        /* transform: scale(1.5); */
+        /* animation: bubbleSize 2s infinite alternate */
     }
     .content-container{
         margin-left: 200px;
@@ -905,6 +1014,11 @@ label{
     }
     .selected-work-info p{
         margin-bottom: 40px;
+    }
+    .selected-work-picture{
+        width: 40vw;
+        overflow: hidden;
+        width: 2100px;
     }
     .vertical-bar{
         padding-left: 20px;
