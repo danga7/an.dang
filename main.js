@@ -229,7 +229,7 @@ tableauBub.map(bub => {
         hoverBub(tableauBub);
     });
     bub.addEventListener("mouseout", () => {
-        unHighlightBub(tableauBub);
+        unhoverBub(tableauBub);
     })
     bub.addEventListener('click', () => {
         console.log('clicked')
