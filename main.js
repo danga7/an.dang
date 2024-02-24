@@ -213,7 +213,6 @@ dataVizBub.map(bub => {
     bub.addEventListener("mouseover", (event) => {
         console.log ("hover on dataviz");
         hoverBub(dataVizBub);
-        showTooltip(mouseX, mouseY);
     });
     bub.addEventListener("mouseout", () => {
         console.log("unhover");

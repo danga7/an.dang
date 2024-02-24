@@ -867,6 +867,7 @@ label{
         width: 160px;
         bottom: 60px;
         left: 40px;
+        line-height: 1.25rem;
     }
     #resetTextMob p{
         padding-top: 10px;
@@ -948,6 +949,10 @@ label{
     .section-3-text{
         display: none;
     }
+    form{
+        display: flex;
+        justify-content: end;
+    }
 }
 
 /* for desktop */
@@ -979,6 +984,7 @@ label{
         width: 160px;
         bottom: 60px;
         left: 60px;
+        line-height: 1.25rem;
     }
     #resetTextMob p{
         padding-top: 10px;
@@ -1060,9 +1066,14 @@ label{
         flex-direction: row;
     }
     .contact-form{
-        width: 50%;
+        width: 80%;
     }
     .section-3-text{
         display: none;
+    }
+    form{
+        width: 60vw;
+        display: flex;
+        justify-content: end;
     }
 }
