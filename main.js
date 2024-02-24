@@ -146,6 +146,7 @@ function highlightBub(highlightedBub) {
     highlightedBub.map(bub => {
         bub.style.transform = "scale(1.8)";
         bub.style.backgroundColor = "white";
+        bub.style.boxShadow = "0px 4px 8px rgba(117, 95, 30, 0.6)";
         bub.style.border = "1px";
         // bub.style.borderColor = "black";
         // bub.style.zIndex = "500";
@@ -154,8 +155,9 @@ function highlightBub(highlightedBub) {
 
 function hoverBub(hoveredBub){
     hoveredBub.map(bub => {
-        bub.style.transform = "scale(1.2)";
-        bub.style.backgroundColor = "white";
+        // bub.style.transform = "scale(1.2)";
+        // bub.style.backgroundColor = "white";
+        bub.style.boxShadow = "0px 4px 8px rgba(117, 95, 30, 0.6)";
     });
 }
 
@@ -169,8 +171,9 @@ function unHighlightBub(unHighlightedBub){
 
 function unhoverBub(unhoveredBub){
     unhoveredBub.map(bub => {
-        bub.style.transform = "";
-        bub.style.backgroundColor = "";
+        // bub.style.transform = "";
+        // bub.style.backgroundColor = "";
+        bub.style.boxShadow = "";
     });
 }
 
@@ -207,136 +210,136 @@ bubbles.forEach(bub => {
 
 //highlight bubbles
 dataVizBub.map(bub => {
-    // bub.addEventListener("mouseover", (event) => {
-    //     console.log ("hover on dataviz");
-    //     hoverBub(dataVizBub);
-    //     showTooltip(mouseX, mouseY);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     console.log("unhover");
-    //     unhoverBub(dataVizBub);
-    //     removeTooltip();
-    // });
+    bub.addEventListener("mouseover", (event) => {
+        console.log ("hover on dataviz");
+        hoverBub(dataVizBub);
+        showTooltip(mouseX, mouseY);
+    });
+    bub.addEventListener("mouseout", () => {
+        console.log("unhover");
+        unhoverBub(dataVizBub);
+        removeTooltip();
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(dataVizBub);
       });
 })
 tableauBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(tableauBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(tableauBub);
-    // })
+    bub.addEventListener("mouseover", () => {
+        hoverBub(tableauBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unHighlightBub(tableauBub);
+    })
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(tableauBub);
       });
 })
 UIBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(UIBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(UIBub);
-    // })
+    bub.addEventListener("mouseover", () => {
+        hoverBub(UIBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(UIBub);
+    })
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(UIBub);
       });
 })
 figmaBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(figmaBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(figmaBub);
-    // })
+    bub.addEventListener("mouseover", () => {
+        hoverBub(figmaBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(figmaBub);
+    })
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(figmaBub);
       });
 })
 htmlBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(htmlBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(htmlBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(htmlBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(htmlBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(htmlBub);
       });
 })
 touchBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(touchBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(touchBub);
-    // })
+    bub.addEventListener("mouseover", () => {
+        hoverBub(touchBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(touchBub);
+    })
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(touchBub);
       });
 })
 conceptBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(conceptBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(conceptBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(conceptBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(conceptBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(conceptBub);
       });
 })
 ptsBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(ptsBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(ptsBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(ptsBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(ptsBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(ptsBub);
       });
 })
 illusBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(illusBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(illusBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(illusBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(illusBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(illusBub);
       });
 })
 aniBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(aniBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(aniBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(aniBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(aniBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(aniBub);
       });
 })
 javaBub.map(bub => {
-    // bub.addEventListener("mouseover", () => {
-    //     highlightBub(javaBub);
-    // });
-    // bub.addEventListener("mouseout", () => {
-    //     unHighlightBub(javaBub);
-    // });
+    bub.addEventListener("mouseover", () => {
+        hoverBub(javaBub);
+    });
+    bub.addEventListener("mouseout", () => {
+        unhoverBub(javaBub);
+    });
     bub.addEventListener('click', () => {
         console.log('clicked')
         highlightBub(javaBub);
@@ -364,7 +367,7 @@ function moveBubbles() {
       var randomY = Math.random() * 10;
       movingBub.style.left = randomX + 'px';
       movingBub.style.top = randomY + 'px';
-      console.log(randomX)
+    //   console.log(randomX)
     });
   }
   
