@@ -57,7 +57,7 @@ button{
     font-weight: 300;
     align-self: flex-start;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     transition: all 0.3s ease 0s;
 }
 
@@ -430,7 +430,7 @@ button:hover{
     width: 50px;
     height: 50px;
     /* border-radius: 100%; */
-    background-color: rgba(233,166,0,0.3);
+    background-color: rgba(1,63,232,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -449,7 +449,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(252,117,117,0.3);
+    background-color: rgba(233,166,0,0.3);
     margin-top: 10px;
     margin-left: -10px;
     flex: 0 0 auto;
@@ -466,7 +466,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(252,117,117,0.3);
+    background-color: rgba(233,166,0,0.3);
     margin-left: -10px;
     flex: 0 0 auto;
     transition: 0.3s;
@@ -482,7 +482,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(1,63,232,0.3);
+    background-color: rgba(252,117,117,0.3);
     margin-top: 15px;
     margin-left: -15px;
     flex: 0 0 auto;
@@ -513,7 +513,7 @@ button:hover{
     width: 65px;
     height: 65px;
     /* border-radius: 100%; */
-    background-color: rgba(233,166,0,0.3);
+    background-color: rgba(1,63,232,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,7 +524,7 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.concept{
+.AI{
     width: 65px;
     height: 65px;
     /* border-radius: 100%; */
@@ -548,7 +548,7 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(1,63,232,0.3);
+    background-color: rgba(252,117,117,0.3);
     margin-left: -15px;
     flex: 0 0 auto;
     transition: 0.3s;
@@ -591,14 +591,14 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.java{
+.AE{
     width: 50px;
     height: 50px;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(1,63,232,0.3);
+    background-color: rgba(252,117,117,0.3);
     margin-top: 8px;
     margin-left: -15px;
     flex: 0 0 auto;
@@ -836,6 +836,7 @@ label{
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 10px;
+    margin-bottom: 60px;
 }
 
 /* ABOUT PAGE */
