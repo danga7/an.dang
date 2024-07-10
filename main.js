@@ -136,11 +136,11 @@ const UIBub = Array.from(document.querySelectorAll('.UI'));
 const figmaBub = Array.from(document.querySelectorAll('.figma'));
 const htmlBub = Array.from(document.querySelectorAll('.html-css'));
 const touchBub = Array.from(document.querySelectorAll('.touch'));
-const conceptBub = Array.from(document.querySelectorAll('.concept'));
+const AIBub = Array.from(document.querySelectorAll('.AI'));
 const ptsBub = Array.from(document.querySelectorAll('.pts'));
 const illusBub = Array.from(document.querySelectorAll('.illus'));
-const aniBub = Array.from(document.querySelectorAll('.animation'));
-const javaBub = Array.from(document.querySelectorAll('.java'));
+const brandBub = Array.from(document.querySelectorAll('.brand'));
+const AEBub = Array.from(document.querySelectorAll('.AE'));
 
 function highlightBub(highlightedBub) {
     highlightedBub.map(bub => {
@@ -284,16 +284,16 @@ touchBub.map(bub => {
         highlightBub(touchBub);
       });
 })
-conceptBub.map(bub => {
+AIBub.map(bub => {
     bub.addEventListener("mouseover", () => {
-        hoverBub(conceptBub);
+        hoverBub(AIBub);
     });
     bub.addEventListener("mouseout", () => {
-        unhoverBub(conceptBub);
+        unhoverBub(AIBub);
     });
     bub.addEventListener('click', () => {
         console.log('clicked')
-        highlightBub(conceptBub);
+        highlightBub(AIBub);
       });
 })
 ptsBub.map(bub => {
@@ -320,28 +320,28 @@ illusBub.map(bub => {
         highlightBub(illusBub);
       });
 })
-aniBub.map(bub => {
+brandBub.map(bub => {
     bub.addEventListener("mouseover", () => {
-        hoverBub(aniBub);
+        hoverBub(brandBub);
     });
     bub.addEventListener("mouseout", () => {
-        unhoverBub(aniBub);
+        unhoverBub(brandBub);
     });
     bub.addEventListener('click', () => {
         console.log('clicked')
-        highlightBub(aniBub);
+        highlightBub(brandBub);
       });
 })
-javaBub.map(bub => {
+AEBub.map(bub => {
     bub.addEventListener("mouseover", () => {
-        hoverBub(javaBub);
+        hoverBub(AEBub);
     });
     bub.addEventListener("mouseout", () => {
-        unhoverBub(javaBub);
+        unhoverBub(AEBub);
     });
     bub.addEventListener('click', () => {
         console.log('clicked')
-        highlightBub(javaBub);
+        highlightBub(AEBub);
       });
 })
 
@@ -370,5 +370,5 @@ function moveBubbles() {
     });
   }
   
-  setInterval(moveBubbles, 2000); 
+  setInterval(moveBubbles, 1800); 
   

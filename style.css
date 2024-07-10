@@ -191,7 +191,7 @@ button:hover{
 }
 
 .headline{
-    padding: 40px 45px 20px 10px;
+    padding: 40px 30px 20px 10px;
 }
 
 .headline a{
@@ -580,7 +580,7 @@ button:hover{
     transform: scale(1.2);
     background-color: white;
 } */
-.animation{
+.brand{
     width: 50px;
     height: 50px;
     /* border-radius: 100%; */
@@ -860,6 +860,14 @@ label{
     margin-bottom: 40px;
 }
 
+.body-container-about{
+    background-color: #FFF9E9;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
 
 /* MEDIA QUERRIES */
 
@@ -973,12 +981,18 @@ label{
         display: flex;
         flex-direction: column;
         width: 40%;
+        padding-right: 40px;
     }
     .about-content{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0px 80px 0px 10px;
+        padding: 0px 60px 0px 10px;
+        /* padding-right: 0px;
+        padding-bottom: 10px; */
+    }
+    .body-container-about{
+        height: 85vh;
     }
     
 }
@@ -1115,5 +1129,8 @@ label{
         flex-direction: row;
         justify-content: space-between;
         padding: 0px 80px 0px 10px;
+    }
+    .body-container-about{
+        height: 85vh;
     }
 }
