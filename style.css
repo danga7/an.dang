@@ -897,20 +897,6 @@ label{
         padding-top: 10px;
     }
 
-    /* .resetDesktop{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #FFC42F;
-        border: 2px solid black; 
-        position: fixed; 
-        bottom: 10px;
-        left: 10px;
-        text-align: center;
-        padding: 10px;
-        line-height: 0.75rem;
-        cursor: pointer;} */
-
     .dropdown-content p{
         margin: 30px 55px 30px 30px;
     }
